@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>  
-    <h2 style={{margin:0, padding:0, marginBottom:5}}> Expence Tracker</h2>
+    <h1 style={{margin:0, padding:0, marginBottom:5, fontSize:30}}> Expence Tracker</h1>
     <Expend />
       
     </>
