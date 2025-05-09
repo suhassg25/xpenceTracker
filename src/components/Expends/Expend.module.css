@@ -1,27 +1,29 @@
-.topRow{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    width : 93vw;
-    background-color: rgb(97, 96, 96);
-    padding: 24px;
-    border-radius: 10px;
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 93vw;
+  background-color: rgb(97, 96, 96);
+  padding: 24px;
+  border-radius: 10px;
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 335px;
-    height: 161px;
-    padding: 10px;
-    margin-left: 20px;
-    background-color: rgb(134, 132, 132);
-    color: white;
-    border-radius: 10px;
-    font-weight: 600;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 335px;
+  height: 161px;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: rgb(134, 132, 132);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
 }
-.card2{
+
+.card2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,21 +31,99 @@
   height: 190px;
   margin-left: 20px;
 }
+
 .modalContent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(112, 111, 111);
-    border-radius: 1rem;
-    padding: 10px;
-    max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(112, 111, 111);
+  border-radius: 1rem;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  background-color: transparent;
+}
+
+.transactions {
+  display: "flex";
+  gap: 10;
+  align-items: "center";
+  justify-content: "space-between"
+}
+
+.recentTransaction {
+  display: "flex";
+  align-items: "center"
+}
+
+.completeTransactions {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns:  1.8fr 1fr;
+  gap: 20px; 
+  width: 104vw;
+}
+.width {
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .topRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85vw;
   }
 
-  .modal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    background-color: transparent;
+  .card {
+    width: 80vw;
+    margin-left: 0;
+    margin-bottom: 50px;
   }
+
+  .card2 {
+    width: 80vw;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .modalContent {
+    width: 90vw;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .recentTransaction {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+  }
+  .completeTransactions {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 93vw;
+    gap: 20px; 
+  }
+  .transactions {
+    padding: 0;
+    margin: 0;    
+  }
+  .width {
+    width: 100%;
+  }
+}

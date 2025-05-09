@@ -118,7 +118,7 @@ const Expend = () => {
                 </div>
             </div>
 
-            <div className="transactions" style={{ marginTop: 5, display: "grid", gridTemplateColumns: "1.8fr 1fr", gap: 20 }}>
+            <div className={StyleSheet.completeTransactions}>
 
                 <div className="mb-6" style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: -20 }}>
                     <h2 className="text-lg font-semibold mb-2">Recent Transactions</h2>
@@ -126,12 +126,12 @@ const Expend = () => {
                         <ul className="divide-y" style={{ backgroundColor: "white", color: "black", borderRadius: 10, marginTop: -20 }}>
                             {expenses.map((expense, index) => (
                                 <li key={index} className="flex justify-between py-2" style={{ listStyle: "none", padding: 3 }}>
-                                    <div style={{ display: "flex", gap: 10, alignItems: "center", justifyContent: "space-between" }}>
+                                    <div className={StyleSheet.transactions}>
                                         <div>
                                             <p style={{ fontSize: 20, fontWeight: 600, margin: 0, padding: 0 }}>{expense.title}</p>
                                             <p style={{ fontWeight: 400, margin: 0, padding: 0, color: "grey" }}>{expense.date}</p>
                                         </div>
-                                        <div style={{ display: "flex", alignItems: "center" }}>
+                                        <div className={StyleSheet.recentTransaction}>
                                             <p style={{ fontSize: 20, fontWeight: 600 }}>₹ {expense.price}</p>
                                             <button onClick={() => handleEdit(index)}><FaEdit /></button>
                                             <button onClick={() => handleDelete(index)}><FaTrash /></button>
@@ -146,7 +146,7 @@ const Expend = () => {
 
                 <div className="grid md:grid-cols-2 gap-4" style={{ marginTop: -20, width: "100%" }}>
                         <h2 className="text-lg font-semibold mb-2">Top Expenses</h2>
-                    <div style={{ backgroundColor: "white", width:"80%", color: "black", borderRadius: 10}}> 
+                    <div className={StyleSheet.width} style={{ backgroundColor: "white", color: "black", borderRadius: 10, marginTop: -10 }}> 
                         <ResponsiveContainer width="90%" height={300} >
                         <BarChart data={expenseSummary} layout="vertical" margin={{ top: 0, right: 10, left: 30, bottom: 10 }}>
                                 <XAxis type="number" hide />
